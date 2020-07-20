@@ -1,0 +1,5 @@
+<!--components/searchInput/searchInput.wxml-->
+<view class="search_input">
+<!-- navigate保存当前页，跳转的非tabbar页面 -->
+  <navigator url="/pages/search/search" open-type="navigate">搜索</navigator>
+</view>

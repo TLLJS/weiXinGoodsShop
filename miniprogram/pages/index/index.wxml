@@ -1,0 +1,6 @@
+<!--pages/index/index.wxml-->
+<view class="pyg_index">
+<!-- 搜索框开始 -->
+<searchInput></searchInput>
+<!-- 搜索框结束 -->
+</view>
