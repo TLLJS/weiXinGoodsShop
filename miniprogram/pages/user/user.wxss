@@ -1,1 +1,120 @@
-/* pages/user/user.wxss */
+page{
+    background-color:#edece8;
+}
+.user_info_wrap{
+    height: 45vh;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--themeColor);
+}
+.user_img_wrap{
+    position: relative;
+}
+.btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid greenyellow;
+    color: greenyellow;
+    font-size: 38rpx;
+    padding: 30rpx;
+    border-radius: 10rpx;
+}
+.user_ig{
+    filter: blur(10rpx);
+    height: 50vh;
+}
+.user_info{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.user_icon{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+}
+.username{
+    margin-top: 40rpx;
+    color: #fff;
+}
+.user_content{
+    position: relative;
+}
+.user_main{
+    position: absolute;
+    top: -40rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    color: #666;
+    padding-bottom: 20rpx;
+}
+.history_wrap{
+    background-color: #fff;
+    display: flex;
+    border-radius: 10rpx;
+
+}
+.history_wrap navigator{
+    flex: 1;
+    text-align: center;
+    padding: 10rpx 0;
+}
+.num{
+    color: var(--themeColor);
+}
+.order_wraps{
+    background-color: #fff;
+    margin-top: 20rpx;
+    border-radius: 10rpx;
+}
+.orders_title{
+    padding: 20rpx 0 20rpx 10rpx;
+    border-bottom: 1px solid #ccc;
+}
+.order_content{
+    display: flex;
+    justify-content: space-around;
+    padding: 15rpx;
+}
+.order_name{
+    padding: 5rpx 0 0 0;
+}
+.order_content navigator{
+    text-align: center;
+}
+.order_content navigator view:first-child{
+    color: var(--themeColor);
+    font-size: 40rpx;
+}
+.shouhuodizhi{
+    background-color: #fff;
+    margin: 15rpx 0;
+    padding: 15rpx;
+    border-radius: 10rpx;
+}
+.tel{
+    background-color: #fff;
+    border-radius: 10rpx;
+}
+.fankui view{
+    margin-top: 10rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    padding: 15rpx;
+}
+.tel navigator{
+    display: flex;
+    justify-content: space-between;
+    padding: 15rpx;
+}
+.recommend{
+    background-color: #fff;
+    padding: 10rpx;
+    margin-top: 15rpx;
+    border-radius: 10rpx;
+}

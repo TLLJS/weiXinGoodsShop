@@ -1,1 +1,47 @@
-/* pages/collect/collect.wxss */
+.collect_main_title{
+    padding: 30rpx 0;
+}
+.collect_main_title text{
+    border: 1rpx solid #ccc;
+    padding: 5rpx 15rpx;
+    margin-left: 20rpx;
+}
+.collect_main_title text:first-child{
+    color: var(--themeColor);
+    border-color: currentColor;
+}
+.collect_main{
+    background-color: #f3f4f6;
+}
+/* pages/goods_detail/goods_detail.wxss */
+ .goods_time{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+.goods_img_wrap{
+flex: 2;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.goods_img_wrap image{
+width: 70%;
+}
+
+.goods_info_wrap{
+flex: 3;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+.goods_name{
+display: -webkit-box;
+overflow: hidden;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+}
+.goods_price{
+color: var(--themeColor);
+font-size: 32rpx;
+}

@@ -1,2 +1,10 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<!-- pages/search/search.wxml -->
+<view class="title">
+    <input class="inp" value="{{value}}" placeholder="请输入内容" bindinput="handelinput" bindblur="blurhandel"></input>
+    <view class="btn" bindtap="handeldelete" wx:if="{{value?true:false}}">取消</view>
+</view>
+<view class="contianer">
+    <navigator wx:for="{{listInfo}}" wx:key="goods_id" url="/pages/goods_list/goods_list?goods_id={{item.goods_id}}">
+        <view class="item">{{item.goods_name}}</view>
+    </navigator>
+</view>

@@ -1,1 +1,118 @@
 /* pages/cart/cart.wxss */
+page{
+  padding-bottom: 60rpx;
+}
+.cartTop{
+  padding: 20rpx;
+}
+.addressInfo{
+  display: flex;
+  padding: 20rpx;
+  font-weight: 600;
+}
+.addressInfoName{
+  flex: 2;
+}
+.addressInfoTel{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shops{
+  font-weight: 600;
+  padding: 20rpx;
+  border-top: 3rpx solid red;
+  border-bottom: 3rpx solid red;
+  font-size:36rpx;
+}
+.goods_item{
+  display: flex;
+  border-bottom: 3rpx  solid #ccc;
+}
+.goods_item_left{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goods_item_center{
+  flex: 2;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.goods_item_right{
+  flex: 4;
+}
+.goods_item_center image{
+  width: 100%;
+  padding-top: 15rpx;
+}
+.right_top{
+  /* 将文字只显示两行，多余的用点显示 */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.right_bottom{
+  display: flex;
+  justify-content: space-between;
+}
+.right{
+  display: flex; 
+  padding-right: 15rpx;
+}
+.goods_item_right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 20rpx;
+}
+.left{
+  color: var(--themeColor);
+  font-weight: 600;
+}
+.jian{
+  border: 2rpx solid #ccc;
+  padding: 5rpx;
+}
+.padds{
+  padding: 0 10rpx;
+}
+.padds+.num{
+  padding: 5rpx 15rpx 0 15rpx;
+}
+.tabBottom{
+  display: flex;
+  justify-content: space-between;
+  border-top: 2rpx solid #ccc;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.right_tabBottom{
+  display: flex;
+}
+.heji{
+  font-weight: 600;
+  font-size: 28rpx;
+}
+.bottom_heji{
+  text-align: right;
+}
+.top_heji text{
+  color: var(--themeColor);
+}
+.jiesuan{
+  background-color: var(--themeColor);
+  color:#FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 30rpx;
+}

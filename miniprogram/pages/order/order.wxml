@@ -1,2 +1,19 @@
 <!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<tabs tabs="{{tabs}}" bindchanges="handelChanges">
+    <view class="order_mian">
+        <view class="item" wx:for="{{arrOrder}}" wx:key="id">
+            <view class="bianhao flexs">
+                <view>订单编号</view>
+                <view>{{item.bianhao}}</view>
+            </view>
+            <view class="price flexs">
+                <view>订单价格</view>
+                <text>¥{{item.price}}</text>
+            </view>
+            <view class="date flexs">
+                <view>订单日期</view>
+                <text>{{item.date}}</text>
+            </view>
+        </view>
+    </view>
+</tabs>

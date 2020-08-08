@@ -1,2 +1,21 @@
 <!--pages/goods_detail/goods_detail.wxml-->
-<text>pages/goods_detail/goods_detail.wxml</text>
+<search></search>
+<tabs tabs="{{tabs}}" bindchanges="handelChanges">
+    <block wx:if="{{tabs[0].isActive}}">
+        <view class="first_tab">
+            <navigator class="goods_time" wx:for="{{goods_list}}" wx:key="goods_id" url="/pages/goods_list/goods_list?goods_id={{item.goods_id}}">
+                <!-- 左侧图片 -->
+                <view class="goods_img_wrap">
+                    <image src="{{item.goods_small_logo?item.goods_small_logo:'http://image4.suning.cn/uimg/b2c/newcatentries/0070175200-000000000763892692_2_400x400.jpg'}}" mode="widthFix"></image>
+                </view>
+                <!-- 右侧商品 -->
+                <view class="goods_info_wrap">
+                    <view class="goods_name">{{item.goods_name}}</view>
+                    <view class="goods_price">¥{{item.goods_price}}</view>
+                </view>
+            </navigator>
+        </view>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">1</block>
+    <block wx:else>2</block>
+</tabs>

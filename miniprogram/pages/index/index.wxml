@@ -3,4 +3,39 @@
 <!-- 搜索框开始 -->
 <searchInput></searchInput>
 <!-- 搜索框结束 -->
+<!-- 轮播图开始 -->
+<view class="swiper_index">
+<!-- swiper默认的宽度为100%，高度为150px image默认的宽度为320px，高度为240px-->
+  <swiper autoplay interval="2000" circular indicator-dots indicator-color='#fff' indicator-active-color="#000">
+    <swiper-item wx:for="{{swiperLists}}" wx:key="goods_id">
+      <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
+        <image mode="widthFix" src="{{item.image_src}}"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 轮播图结束 -->
+<!-- 导航开始 -->
+<view class="index_cate">
+  <navigator wx:for="{{navList}}" wx:key="name" wx:for-item="items">
+    <image mode="widthFix" src="{{items.image_src}}"></image>
+  </navigator>
+</view>
+<!-- 导航结束 -->
+<!-- 楼层开始 -->
+  <view class="floors">
+    <view wx:for="{{floorsList}}" wx:key='name'>
+        <!-- 标题 -->
+      <view class="floors_title">
+        <image src="{{item.floor_title.image_src}}" mode="widthFix"></image>
+      </view>
+      <!-- 内容 -->
+      <view class="floors_detail">
+        <navigator wx:for="{{item.product_list}}" wx:key='name' wx:for-index='index1' wx:for-item='items' url="{{items.navigator_url}}">
+          <image mode="{{index1==0?'widthFix':'scaleToFill'}}" src="{{items.image_src}}"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+<!-- 楼层结束 -->
 </view>

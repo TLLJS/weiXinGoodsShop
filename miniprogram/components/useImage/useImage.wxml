@@ -1,0 +1,5 @@
+<!--components/useImage/useImage.wxml-->
+<view class="user">
+    <image class="" src="{{path}}"></image>
+    <icon type="clear" color="red" bindtap="handeldelete" data-str="{{path}}"></icon>
+</view>

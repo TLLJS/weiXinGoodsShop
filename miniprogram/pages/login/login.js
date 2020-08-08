@@ -1,4 +1,4 @@
-// pages/login/login.js
+// pages/user/user.js
 Page({
 
   /**
@@ -7,7 +7,16 @@ Page({
   data: {
 
   },
-
+  getUserinfo(e){
+     const {userInfo}=e.detail
+    console.log(userInfo)
+    // 将用户信息存储到本地缓存中
+    wx.setStorageSync('userInfo', userInfo);
+    wx.navigateTo({
+      url: '/pages/user/user',
+      
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */

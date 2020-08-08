@@ -1,1 +1,6 @@
 /* pages/auth/auth.wxss */
+.default{
+    margin-top: 20rpx;
+    background-color: greenyellow;
+
+}

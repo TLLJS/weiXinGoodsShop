@@ -1,2 +1,64 @@
 <!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class="cart">
+  <view class="cartTop" wx:if="{{flag}}">
+    <button type="primary" plain bindtap="handleAddress" >添加收货地址</button>
+  </view>
+  <view wx:else class="addressInfo">
+    <view class="addressInfoName">
+      <view>收件人：{{address.userName}}</view>
+      <view>{{address.all}}</view>
+    </view>
+    <view class="addressInfoTel">{{address.telNumber}}</view>
+  </view>
+  <view class="shops">购物车</view>
+  <!-- 商品列表 -->
+  <view class="goods_item" wx:for="{{goodsLists}}" wx:key="goods_id">
+  <!-- 左侧部分 -->
+    <view class="goods_item_left">
+      <checkbox-group bindchange="changeSelect" data-id="{{item.goods_id}}">
+        <checkbox checked="{{item.flag}}"></checkbox>
+      </checkbox-group>
+    </view>
+  <!-- 中间部分 -->
+    <view class="goods_item_center">
+      <navigator>
+        <image mode="widthFix" src="{{item.pics[0].pics_big}}"></image>
+      </navigator>
+    </view>
+    <!-- 右侧部分 -->
+    <view class="goods_item_right">
+      <view class="right_top">{{item.goods_name}}</view>
+      <view class="right_bottom">
+        <view class="left">¥{{item.goods_price}}</view>
+        <view class="right">
+          <view class="jian padds" bindtap="handeljian" data-goodsid="{{item.goods_id}}">-</view>
+          <view class="num">{{item.num}}</view>
+          <view class="jian" bindtap="handleadd" data-id="{{item.goods_id}}">+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 购物车无商品时显示 -->
+  <view hidden="{{goodsLists.length===0?false:true}}">
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596280171669&di=26dd7d24edccbfde0600c84f5e9d2721&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658"></image>
+  </view>
+  <!-- 底部工具栏 -->
+  <view class="tabBottom" hidden="{{goodsLists.length===0?true:false}}">
+  <!-- 全选按钮 -->
+    <view class="left_tabBottom">
+      <checkbox-group bindchange="checkSelect">
+        <checkbox checked="{{botFlag}}"></checkbox>全选
+      </checkbox-group>
+    </view>
+    <!-- 合计 -->
+    <view class="right_tabBottom">
+      <view class="heji">
+        <view class="top_heji">合计：
+          <text>¥{{totalPrice}}</text>
+        </view>
+        <view class="bottom_heji">包含运费</view>
+      </view>
+      <view class="jiesuan" bindtap="handeljiesuna">结算({{total}})</view>
+    </view>
+  </view>
+</view>

@@ -1,1 +1,36 @@
 /* pages/search/search.wxss */
+page{
+    background-color: #ccc;
+    padding: 10rpx;
+}
+.title{
+    display: flex;
+    align-items: center;
+}
+.inp{
+    flex: 5;
+    background-color: #fff;
+    padding: 10rpx;
+    border-radius: 10rpx;
+}
+.btn{
+    flex: 1;
+    background-color: #fff;
+    padding: 13rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    margin-left: 10rpx;
+}
+.contianer{
+    margin-top: 15rpx;
+}
+.item{
+    background-color: #fff;
+    padding: 15rpx;
+   
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* font-weight: bolder; */
+    border-bottom: 1px solid #ccc;
+}

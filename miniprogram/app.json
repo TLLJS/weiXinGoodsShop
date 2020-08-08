@@ -44,7 +44,7 @@
       "selectedIconPath": "icons/myfa_active.png"
     },
     {
-      "pagePath": "pages/user/user",
+      "pagePath": "pages/login/login",
       "text": "我的",
       "iconPath": "icons/myfa.png",
       "selectedIconPath": "icons/myfa_active.png"

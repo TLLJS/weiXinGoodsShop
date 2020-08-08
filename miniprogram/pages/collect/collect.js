@@ -5,9 +5,45 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // 收藏的商品数据
+    goods_list:[],
+    tabs:[
+      {
+      id:0,
+      value:'商品收藏',
+      isActive:true
+      },
+      {
+        id:1,
+        value:'品牌收藏',
+        isActive:false
+      },
+      {
+        id:2,
+        value:'店铺收藏',
+        isActive:false
+      },
+      {
+        id:3,
+        value:'浏览足迹',
+        isActive:false
+      }
+    ]
   },
-
+  handelChanges(e){
+    console.log(e.detail)
+    let tabs=this.data.tabs;
+    tabs.forEach((element,index) => {
+      if(e.detail==index){
+         element.isActive=true
+      }else{
+        element.isActive=false
+      }
+    });
+    this.setData({
+      tabs
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,7 +62,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let goods_list=wx.getStorageSync('collectGoods')||[];
+    this.setData({goods_list})
   },
 
   /**

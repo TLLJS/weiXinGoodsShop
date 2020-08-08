@@ -1,1 +1,4 @@
-/* pages/login/login.wxss */
+
+.but{
+    margin-top: 40rpx;
+}

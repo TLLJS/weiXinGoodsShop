@@ -5,9 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo:{},
+    // 收藏的商品个数
+    num:0
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,7 +27,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    const userInfo= wx.getStorageSync('userInfo');
+    const collectGoods=wx.getStorageSync('collectGoods');
+    let num=collectGoods.length;
+    this.setData({
+      userInfo,
+      num
+    })
+    console.log(this.data.userInfo)
   },
 
   /**

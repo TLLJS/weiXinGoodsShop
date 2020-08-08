@@ -1,2 +1,45 @@
-<!--pages/goods_list/goods_list.wxml-->
-<text>pages/goods_list/goods_list.wxml</text>
+<!-- pages/goods_list/goods_list.wxml -->
+<!-- 轮播图 -->
+<view class="swipers">
+  <!-- autoplay设置自动播放，indicator-dots是否显示轮播指示器 indicator-color轮播指示器的颜色 indicator-active-color
+轮播指示器被选中的颜色 interval设置轮播的时间间隔，circular设置循环轮播 -->
+  <swiper autoplay indicator-dots indicator-color indicator-active-color interval="{{1000}}" circular>
+    <swiper-item wx:for="{{goodsInfo.pics}}" wx:key="pics_id" bindtap="handerimage" data-url='{{item.pics_mid}}'>
+      <image src="{{item.pics_mid}}" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 价格 -->
+<view class="goods_price">{{"¥"+goodsInfo.goods_price}}</view>
+<!-- 商品的名字 -->
+<view class="goods_name_row">
+  <view class="goods_name">{{goodsInfo.goods_name}}</view>
+  <view class="goods_collect" bind:tap="collects">
+    <text class="iconfont icon-shoucang {{isActive?'res':''}}"></text>
+    <view class="collect_text">收藏</view>
+  </view>
+</view>
+<view class="goods_info">
+  <view class="goods_info_title">图文详情</view>
+  <view>
+    <rich-text nodes="{{goodsInfo.goods_introduce}}"></rich-text>
+  </view>
+</view>
+<view class="bottom_tool">
+  <view class="tool-item">
+    <view class="iconfont icon-kefu"></view>
+    <view class="tool-item-bo">联系客服</view>
+    <button open-type="contact"></button>
+  </view>
+  <view class="tool-item">
+    <view class="iconfont icon-gouwuche"></view>
+    <view class="tool-item-bo">分享</view>
+    <button open-type="share"></button>
+  </view>
+  <view class="tool-item">
+    <view class="iconfont icon-gouwuche"></view>
+    <navigator class="tool-item-bo" open-type="switchTab" url="/pages/cart/cart">购物车</navigator>
+  </view>
+  <view class="tool-item cart" bindtap="addCart">加入购物车</view>
+  <view class="tool-item buy">立即购买</view>
+</view>

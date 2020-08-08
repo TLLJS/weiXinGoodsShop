@@ -1,2 +1,31 @@
-<!--pages/feedback/feedback.wxml-->
-<text>pages/feedback/feedback.wxml</text>
+<!-- pages/feedback/feedback.wxml -->
+<tabs tabs="{{tabs}}" bindchanges="handelChanges" class="as">
+    <view class="mains">
+        <view class="title">
+            <view class="title_top">问题的种类</view>
+            <view class="main">
+                <text>功能建议</text>
+                <text>购买时遇到的问题</text>
+                <text>性能问题</text>
+                <view>
+                    <text>其他</text>
+                </view>
+            </view>
+        </view>
+        <view class="textaresa">
+            <textarea bindinput="handelinput" class="er" value="{{values}}" placeholder="请描述一下问题"></textarea>
+            <view class="btn">
+                <button bind:tap="handelbtn">+</button>
+                <view class="iamfd" wx:for="{{path}}" wx:key="*this">
+                    <useImage path="{{item}}" binddeletes='handels'></useImage>
+                </view>
+            </view>
+        </view>
+        <view class="form_btn" bind:tap="submits">
+            <button type="warning">
+                <icon type="success" color="white"></icon>
+                提交
+            </button>
+        </view>
+    </view>
+</tabs>
